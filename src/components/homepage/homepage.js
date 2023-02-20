@@ -1,11 +1,11 @@
-import  DataTable  from "./DataTable";
-import PieChart from "./PieChart";
+//import  DataTable  from "./DataTable";
+//import PieChart from "./PieChart";
+import AppleDatagrid from "./DataGrid";
 
 export function HomePage() {
     return (
       <>
-      <DataTable />
-      <PieChart />
+      <AppleDatagrid />
       </>
     )
 

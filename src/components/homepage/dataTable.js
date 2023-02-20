@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 import axios from 'axios';
 import "./datatable.css"
 
-export default function DataTable() {
+export function DataTable() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
