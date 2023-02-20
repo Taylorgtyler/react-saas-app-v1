@@ -1,16 +1,25 @@
+import { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
+import axios from 'axios';
+import "./datatable.css"
 
-function dataTable(props) {
-  const { data } = props;
+export default function DataTable() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://jsonplaceholder.typicode.com/todos')
+      .then(response => setData(response.data))
+      .catch(error => console.error(error));
+  }, []);
 
   return (
-    <Table striped bordered hover>
-      <thead>
+    <Table striped className='DataTable'>
+      <thead className='thead-dark'>
         <tr>
-          <th>User ID</th>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Completed</th>
+          <th className='th-light'>User ID</th>
+          <th className='th-light'>Task ID</th>
+          <th className='th-light'>Title</th>
+          <th className='th-light'>Completed</th>
         </tr>
       </thead>
       <tbody>
@@ -26,5 +35,3 @@ function dataTable(props) {
     </Table>
   );
 }
-
-export default dataTable;

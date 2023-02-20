@@ -1,21 +1,13 @@
-import { useState, useEffect } from "react";
-import {dataTable} from "./dataTable";
+import  DataTable  from "./DataTable";
+import PieChart from "./PieChart";
 
-export function Homepage() {
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/todos.json')
-          .then(response => response.json())
-          .then(data => setData(data))
-          .catch(error => console.error(error));
-      }, []);
-
+export function HomePage() {
     return (
-        <div className="App">
-            <dataTable data={data} />
-        </div>
-    );
+      <>
+      <DataTable />
+      <PieChart />
+      </>
+    )
 
 
 }

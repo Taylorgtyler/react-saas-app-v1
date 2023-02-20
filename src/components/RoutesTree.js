@@ -3,15 +3,14 @@ import { Route, Routes } from "react-router-dom";
 
 // Component Imports
 import { Login } from "./login/login";
-import { Homepage } from "./homepage/homepage";
-
+import { HomePage } from "./homepage/HomePage";
 
 const RoutesTree = () => {
     return (
         <div>
             <Routes>
-                <Route path="/login" element={<Login />}></Route>
-                <Route path="/" element={<Homepage />}></Route>
+                <Route path="/" element={<Login />}></Route>
+                <Route path="/home" element={<HomePage />}></Route>
             </Routes>
         </div>
     );

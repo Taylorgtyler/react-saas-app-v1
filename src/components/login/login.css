@@ -6,7 +6,7 @@
   }
   
   .form {
-    background-color: #f0ece9;
+    background-color: #f3eeeb78;
     border-radius: 12px;
     padding: 28px;
     width: 400px;
@@ -36,7 +36,7 @@
   }
   
   .button {
-    background-color: #004ea2;
+    background-color: #003f82ba;
     border: none;
     border-radius: 4px;
     color: #ffffff;
@@ -50,7 +50,7 @@
   }
   
   .button:hover {
-    background-color: #006be0;
+    background-color: #003f82e3;
   }
   
   .button:focus {
